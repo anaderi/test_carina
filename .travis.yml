@@ -1,6 +1,7 @@
 # Travis (https://travis-ci.org) configuration file
 
 sudo: required
+language: python
 services:
   - docker
 matrix:
@@ -9,13 +10,14 @@ matrix:
           python: 2.7
           sudo: required
 
+
 before_install:
   - apt-get install -y wget unzip
 install:
   - if [[ -z "$CARINA_URL" ]] ; then
-    echo "please specify URL" ;
-    exit 1 ;
-  fi
+      echo "please specify URL" ;
+      exit 1 ;
+    fi
   - wget -O c1.zip $CARINA_URL
   - unzip c1.zip
   - source c1/docker.env
