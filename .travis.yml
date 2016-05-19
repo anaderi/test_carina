@@ -12,7 +12,7 @@ matrix:
 
 
 before_install:
-  - apt-get install -y wget unzip
+  - sudo apt-get install -y wget unzip
 install:
   - if [[ -z "$CARINA_URL" ]] ; then
       echo "please specify URL" ;
