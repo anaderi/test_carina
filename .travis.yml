@@ -13,8 +13,8 @@ before_install:
   - apt-get install -y wget unzip
 install:
   - if [[ -z "$CARINA_URL" ]] ; then
-    echo "please specify URL"
-    exit 1
+    echo "please specify URL" ;
+    exit 1 ;
   fi
   - wget -O c1.zip $CARINA_URL
   - unzip c1.zip
