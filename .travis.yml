@@ -21,4 +21,6 @@ install:
   - source c1/docker.env
 script:
   - docker images
+notifications:
+  email: false
 
